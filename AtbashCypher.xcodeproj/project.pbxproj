@@ -62,6 +62,7 @@
 		5D9F48A12B642BEF0010FE1A /* CypherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CypherTests.swift; sourceTree = "<group>"; };
 		5DF2FB7F2B67EFAD00D2F10A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		5DF2FB812B67F5AF00D2F10A /* CypherIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CypherIntegrationTests.swift; sourceTree = "<group>"; };
+		5DF2FB832B6806E000D2F10A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 		5D9F48862B642BC60010FE1A = {
 			isa = PBXGroup;
 			children = (
+				5DF2FB832B6806E000D2F10A /* README.md */,
 				5D9F48912B642BC60010FE1A /* AtbashCypher */,
 				5D9F48A02B642BEF0010FE1A /* AtbashTests */,
 				5D9F48902B642BC60010FE1A /* Products */,
