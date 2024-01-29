@@ -7,5 +7,22 @@
 
 import Foundation
 
-print("Hello, World!")
-
+class Cypher: AtbashCodable, Englishifier {
+    let service: any HTTPService
+    
+    init(service: any HTTPService) {
+        self.service = service
+    }
+    
+    func encode(_ message: String) -> String {
+        ""
+    }
+    
+    func decode(_ message: String) -> String {
+        ""
+    }
+    
+    func attemptEnglishification(of decodedMessage: String) -> String {
+        ""
+    }
+}
