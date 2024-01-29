@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Implementation of AtbashCypher that can encode and decode messages in the latin alphabet using the atbash method.
+/// https://en.wikipedia.org/wiki/Atbash
 class Cypher: AtbashCodable, Englishifier {
     var service = OpenAIService()
     

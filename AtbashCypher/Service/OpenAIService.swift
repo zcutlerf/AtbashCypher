@@ -50,6 +50,12 @@ class OpenAIService: HTTPService {
         self.urlSession = urlSession
     }
     
+    /// Gets a chat completion from OpenAI based on a prompt.
+    /// - Parameters:
+    ///   - prompt: Prompt to send as a `user` message to OpenAI's chat endpoint.
+    ///   - maxTokens: The maximum number of chat tokens OpenAI should return.
+    /// - Returns: The assistant's chat response, as a string.
+    /// - Throws: Errors constructing URL or URLRequest, retrieving data, or decoding/parsing data.
     func chat(prompt: String, maxTokens: Int = 200) async throws -> String {
         let url = try url(to: .chat)
         

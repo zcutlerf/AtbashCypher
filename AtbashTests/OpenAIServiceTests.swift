@@ -52,6 +52,7 @@ class OpenAIServiceTests: XCTestCase {
             
             do {
                 let _ = try await sut.chat(prompt: "A sample prompt.")
+                XCTFail("Did not fail.")
             } catch OpenAIService.OpenAIError.noResponseChoicesAvailable {
                 // Success
             } catch {
@@ -71,6 +72,7 @@ class OpenAIServiceTests: XCTestCase {
         
         do {
             let _ = try await sut.chat(prompt: "A sample prompt.")
+            XCTFail("Did not fail.")
         } catch Swift.DecodingError.dataCorrupted(_) {
             // Success
         } catch {
