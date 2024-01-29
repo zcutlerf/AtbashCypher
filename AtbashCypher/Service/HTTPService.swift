@@ -8,6 +8,8 @@
 import Foundation
 
 protocol HTTPService {
+    var urlSession: URLSession { get }
+    
     static var scheme: String { get }
     static var host: String { get }
     
@@ -55,7 +57,7 @@ extension HTTPService {
     }
     
     func data(for request: URLRequest) async throws -> Data {
-        try await URLSession.shared.data(for: request).0
+        try await urlSession.data(for: request).0
     }
 }
 

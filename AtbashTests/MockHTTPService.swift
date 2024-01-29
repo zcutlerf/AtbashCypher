@@ -7,6 +7,8 @@
 import Foundation
 
 class MockHTTPService: HTTPService {
+    var urlSession = URLSession.shared
+    
     static var scheme: String { "https" }
     static var host: String { "my.amazing.api" }
     
@@ -23,6 +25,8 @@ class MockHTTPService: HTTPService {
 }
 
 class BrokenHTTPService: HTTPService {
+    var urlSession = URLSession.shared
+    
     static var scheme: String { "failure" }
     static var host: String { "/,/43,&&</,&" }
     

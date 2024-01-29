@@ -7,7 +7,7 @@
 
 import Foundation
 
-actor OpenAIService: HTTPService {
+class OpenAIService: HTTPService {
     static var scheme = "https"
     static var host = "api.openai.com"
     
@@ -42,6 +42,12 @@ actor OpenAIService: HTTPService {
                 NSLocalizedString("OpenAI API returned no available choices.", comment: "Error when trying to get a response from OpenAI API but there are no available choices.")
             }
         }
+    }
+    
+    var urlSession: URLSession
+    
+    init(urlSession: URLSession = URLSession.shared) {
+        self.urlSession = urlSession
     }
     
     func chat(prompt: String, max_tokens: Int = 200) async throws -> String {
