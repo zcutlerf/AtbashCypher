@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class AtbashTests: XCTestCase {
+final class CypherTests: XCTestCase {
     func test_encode_ABecomesZ() {
         let sut = createSUT()
         let original = "a"

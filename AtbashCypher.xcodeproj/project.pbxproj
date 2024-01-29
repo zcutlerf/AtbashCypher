@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0A9B4C2B67E3A300539205 /* Cypher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9B4B2B67E3A300539205 /* Cypher.swift */; };
+		5D0A9B4F2B67E3E500539205 /* Cypher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9B4B2B67E3A300539205 /* Cypher.swift */; };
 		5D5F0ECF2B642F9400997D00 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F48922B642BC60010FE1A /* main.swift */; };
 		5D5F0ED12B64318700997D00 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F0ED02B64318700997D00 /* HTTPService.swift */; };
 		5D5F0ED32B64319600997D00 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F0ED22B64319600997D00 /* OpenAIService.swift */; };
@@ -24,7 +26,7 @@
 		5D5F0EE72B645B2500997D00 /* OpenAIServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F0EE62B645B2500997D00 /* OpenAIServiceIntegrationTests.swift */; };
 		5D5F0EE92B64605300997D00 /* MockHTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F0EE82B64605300997D00 /* MockHTTPService.swift */; };
 		5D9F48932B642BC60010FE1A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F48922B642BC60010FE1A /* main.swift */; };
-		5D9F48A22B642BEF0010FE1A /* AtbashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F48A12B642BEF0010FE1A /* AtbashTests.swift */; };
+		5D9F48A22B642BEF0010FE1A /* CypherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F48A12B642BEF0010FE1A /* CypherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D0A9B4B2B67E3A300539205 /* Cypher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cypher.swift; sourceTree = "<group>"; };
 		5D5F0ED02B64318700997D00 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		5D5F0ED22B64319600997D00 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		5D5F0ED42B6431AC00997D00 /* HTTPServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceTests.swift; sourceTree = "<group>"; };
@@ -52,7 +55,7 @@
 		5D9F488F2B642BC60010FE1A /* AtbashCypher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AtbashCypher; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9F48922B642BC60010FE1A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5D9F489F2B642BEF0010FE1A /* AtbashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtbashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D9F48A12B642BEF0010FE1A /* AtbashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashTests.swift; sourceTree = "<group>"; };
+		5D9F48A12B642BEF0010FE1A /* CypherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CypherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D0A9B4D2B67E3AF00539205 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A9B4B2B67E3A300539205 /* Cypher.swift */,
+				5D5F0EDE2B64439200997D00 /* AtbashCodable.swift */,
+				5D5F0EE12B64442900997D00 /* Englishifier.swift */,
+				5D5F0EDB2B64399700997D00 /* OpenAIModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D0A9B4E2B67E3C100539205 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5D5F0ED02B64318700997D00 /* HTTPService.swift */,
+				5D5F0ED22B64319600997D00 /* OpenAIService.swift */,
+				5D5F0ED82B64337600997D00 /* APIKeys.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		5D9F48862B642BC60010FE1A = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				5D9F48922B642BC60010FE1A /* main.swift */,
-				5D5F0EDE2B64439200997D00 /* AtbashCodable.swift */,
-				5D5F0ED02B64318700997D00 /* HTTPService.swift */,
-				5D5F0EE12B64442900997D00 /* Englishifier.swift */,
-				5D5F0ED22B64319600997D00 /* OpenAIService.swift */,
-				5D5F0EDB2B64399700997D00 /* OpenAIModels.swift */,
-				5D5F0ED82B64337600997D00 /* APIKeys.swift */,
+				5D0A9B4D2B67E3AF00539205 /* Model */,
+				5D0A9B4E2B67E3C100539205 /* Service */,
 			);
 			path = AtbashCypher;
 			sourceTree = "<group>";
@@ -108,7 +128,7 @@
 		5D9F48A02B642BEF0010FE1A /* AtbashTests */ = {
 			isa = PBXGroup;
 			children = (
-				5D9F48A12B642BEF0010FE1A /* AtbashTests.swift */,
+				5D9F48A12B642BEF0010FE1A /* CypherTests.swift */,
 				5D5F0EE82B64605300997D00 /* MockHTTPService.swift */,
 				5D5F0ED42B6431AC00997D00 /* HTTPServiceTests.swift */,
 				5D5F0EE62B645B2500997D00 /* OpenAIServiceIntegrationTests.swift */,
@@ -207,6 +227,7 @@
 			files = (
 				5D5F0EDC2B64399700997D00 /* OpenAIModels.swift in Sources */,
 				5D5F0EE22B64442900997D00 /* Englishifier.swift in Sources */,
+				5D0A9B4C2B67E3A300539205 /* Cypher.swift in Sources */,
 				5D9F48932B642BC60010FE1A /* main.swift in Sources */,
 				5D5F0ED12B64318700997D00 /* HTTPService.swift in Sources */,
 				5D5F0ED92B64337600997D00 /* APIKeys.swift in Sources */,
@@ -221,11 +242,12 @@
 			files = (
 				5D5F0EE72B645B2500997D00 /* OpenAIServiceIntegrationTests.swift in Sources */,
 				5D5F0EE92B64605300997D00 /* MockHTTPService.swift in Sources */,
+				5D0A9B4F2B67E3E500539205 /* Cypher.swift in Sources */,
 				5D5F0EDA2B64348A00997D00 /* APIKeys.swift in Sources */,
 				5D5F0ED72B6431BF00997D00 /* HTTPService.swift in Sources */,
 				5D5F0ECF2B642F9400997D00 /* main.swift in Sources */,
 				5D5F0EE02B6443DB00997D00 /* AtbashCodable.swift in Sources */,
-				5D9F48A22B642BEF0010FE1A /* AtbashTests.swift in Sources */,
+				5D9F48A22B642BEF0010FE1A /* CypherTests.swift in Sources */,
 				5D5F0EE32B64443200997D00 /* Englishifier.swift in Sources */,
 				5D5F0EDD2B643A0100997D00 /* OpenAIModels.swift in Sources */,
 				5D5F0ED52B6431AC00997D00 /* HTTPServiceTests.swift in Sources */,
