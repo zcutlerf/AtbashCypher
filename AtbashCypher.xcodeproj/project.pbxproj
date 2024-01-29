@@ -29,6 +29,7 @@
 		5D9F48932B642BC60010FE1A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F48922B642BC60010FE1A /* main.swift */; };
 		5D9F48A22B642BEF0010FE1A /* CypherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F48A12B642BEF0010FE1A /* CypherTests.swift */; };
 		5DF2FB802B67EFAD00D2F10A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2FB7F2B67EFAD00D2F10A /* MockURLSession.swift */; };
+		5DF2FB822B67F5AF00D2F10A /* CypherIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2FB812B67F5AF00D2F10A /* CypherIntegrationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,7 @@
 		5D9F489F2B642BEF0010FE1A /* AtbashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtbashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9F48A12B642BEF0010FE1A /* CypherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CypherTests.swift; sourceTree = "<group>"; };
 		5DF2FB7F2B67EFAD00D2F10A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		5DF2FB812B67F5AF00D2F10A /* CypherIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CypherIntegrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				5D5F0ED42B6431AC00997D00 /* HTTPServiceTests.swift */,
 				5D0A9B522B67E5DC00539205 /* OpenAIServiceTests.swift */,
 				5D5F0EE62B645B2500997D00 /* OpenAIServiceIntegrationTests.swift */,
+				5DF2FB812B67F5AF00D2F10A /* CypherIntegrationTests.swift */,
 			);
 			path = AtbashTests;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				5D5F0EDD2B643A0100997D00 /* OpenAIModels.swift in Sources */,
 				5D5F0ED52B6431AC00997D00 /* HTTPServiceTests.swift in Sources */,
 				5D5F0ED62B6431BD00997D00 /* OpenAIService.swift in Sources */,
+				5DF2FB822B67F5AF00D2F10A /* CypherIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
