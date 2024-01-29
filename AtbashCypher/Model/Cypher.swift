@@ -37,10 +37,10 @@ class Cypher: AtbashCodable, Englishifier {
     }
     
     private func reverse(_ letter: Character) -> Character {
-        guard letter.isLetter else {
+        let alphabet = "abcdefghijklmnopqrstuvwxyz"
+        guard alphabet.contains(letter) else {
             return letter
         }
-        let alphabet = "abcdefghijklmnopqrstuvwxyz"
         let position = 25 - (alphabet.firstIndex(of: letter)?.utf16Offset(in: alphabet) ?? 0)
         let index = alphabet.index(alphabet.startIndex, offsetBy: position)
         return alphabet[index]

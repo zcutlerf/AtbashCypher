@@ -35,7 +35,16 @@ final class CypherTests: XCTestCase {
         XCTAssertEqual(encoded, "123z")
     }
     
-    func test_encode_ignoresWhitespace() {
+    func test_encode_ignoresNonLatinCharacters() {
+        let sut = createSUT()
+        let original = "é"
+        
+        let encoded = sut.encode(original)
+        
+        XCTAssertEqual(encoded, "é")
+    }
+    
+    func test_encode_excludesWhitespace() {
         let sut = createSUT()
         let original = "  b\t   \n"
         
