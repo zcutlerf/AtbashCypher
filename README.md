@@ -18,3 +18,7 @@ What I learned:
 * Using `URLProtocol` to create my own `URLSession` to test the behavior of a service based on specific HTTP responses.
 * Using integration tests to test the actual behavior of a service contacting an API.
 * Creating a `HTTPService` protocol to create complex URLRequests in a type-safe way, and streamline code in actual services.
+
+> [!NOTE]
+> If cloning this repository and opening in Xcode, you must create a file named **APIKeys.swift** in the **Service** folder.
+> Inside this file, write `let openAiApiKey = "your-api-key"`
