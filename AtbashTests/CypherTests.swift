@@ -108,6 +108,6 @@ final class CypherTests: XCTestCase {
     }
     
     private func createSUT() -> Cypher {
-        Cypher(service: MockHTTPService())
+        Cypher()
     }
 }

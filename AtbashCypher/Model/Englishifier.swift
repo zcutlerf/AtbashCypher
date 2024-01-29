@@ -8,5 +8,9 @@
 import Foundation
 
 protocol Englishifier {
-    func attemptEnglishification(of decodedMessage: String) -> String
+    associatedtype Service: HTTPService
+    
+    var service: Service { get }
+    
+    func attemptEnglishification(of decodedMessage: String) async throws -> String
 }

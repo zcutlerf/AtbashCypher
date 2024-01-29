@@ -50,10 +50,10 @@ class OpenAIService: HTTPService {
         self.urlSession = urlSession
     }
     
-    func chat(prompt: String, max_tokens: Int = 200) async throws -> String {
+    func chat(prompt: String, maxTokens: Int = 200) async throws -> String {
         let url = try url(to: .chat)
         
-        let body = OpenAIChatBody(model: Endpoint.chat.model, messages: [OpenAIChat(role: .user, content: prompt)], max_tokens: max_tokens)
+        let body = OpenAIChatBody(model: Endpoint.chat.model, messages: [OpenAIChat(role: .user, content: prompt)], max_tokens: maxTokens)
         
         let request = try request(url, with: .post, body: body, headers: [
             .contentType: .json,

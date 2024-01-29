@@ -8,21 +8,45 @@
 import Foundation
 
 class Cypher: AtbashCodable, Englishifier {
-    let service: any HTTPService
-    
-    init(service: any HTTPService) {
-        self.service = service
-    }
+    var service = OpenAIService()
     
     func encode(_ message: String) -> String {
-        ""
+        message
+            .lowercased()
+            .filter { character in
+                !character.isPunctuation && !character.isWhitespace
+            }
+            .enumerated().map { (index, character) in
+                String(reverse(character)) + (index % 5 == 4 ? " " : "")
+            }
+            .joined()
+            .trimmingCharacters(in: .whitespaces)
     }
     
     func decode(_ message: String) -> String {
-        ""
+        message
+            .filter { character in
+                !character.isWhitespace
+            }
+            .map { character in
+                String(reverse(character))
+            }
+            .joined()
     }
     
-    func attemptEnglishification(of decodedMessage: String) -> String {
-        ""
+    private func reverse(_ letter: Character) -> Character {
+        guard letter.isLetter else {
+            return letter
+        }
+        let alphabet = "abcdefghijklmnopqrstuvwxyz"
+        let position = 25 - (alphabet.firstIndex(of: letter)?.utf16Offset(in: alphabet) ?? 0)
+        let index = alphabet.index(alphabet.startIndex, offsetBy: position)
+        return alphabet[index]
+    }
+    
+    func attemptEnglishification(of decodedMessage: String) async throws -> String {
+        let maxTokens = decodedMessage.count / 3
+        let prompt = "This message was decoded from a cypher without spaces or punctuation. Please add it back in.\n\(decodedMessage)"
+        return try await service.chat(prompt: prompt, maxTokens: maxTokens)
     }
 }
